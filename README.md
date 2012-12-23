@@ -1,4 +1,4 @@
-ducking-octo-nemesis
+psrWorkflow
 ====================
 
 Projet PSR, moteur de gestion de workflow
