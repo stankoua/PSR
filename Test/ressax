@@ -1,0 +1,1984 @@
+Debut de l'element:>>tns:process<<
+caracteres:text:>>
+  <tns:description>Processus stage</tns:description>
+  <tns:variableList>
+  	<tns:variable name="description_stage" type="string" />
+  	<tns:variable name="validation" type="bool" initialValue="false" />
+  </tns:variableList>
+  <tns:activityList>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Processus stage</tns:description>
+  <tns:variableList>
+  	<tns:variable name="description_stage" type="string" />
+  	<tns:variable name="validation" type="bool" initialValue="false" />
+  </tns:variableList>
+  <tns:activityList>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+  <tns:variableList>
+  	<tns:variable name="description_stage" type="string" />
+  	<tns:variable name="validation" type="bool" initialValue="false" />
+  </tns:variableList>
+  <tns:activityList>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:variableList<<
+caracteres:text:>>
+  	<tns:variable name="description_stage" type="string" />
+  	<tns:variable name="validation" type="bool" initialValue="false" />
+  </tns:variableList>
+  <tns:activityList>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:variable<<
+fin de l'element:>>tns:variable<<
+caracteres:text:>>
+  	<tns:variable name="validation" type="bool" initialValue="false" />
+  </tns:variableList>
+  <tns:activityList>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:variable<<
+fin de l'element:>>tns:variable<<
+caracteres:text:>>
+  </tns:variableList>
+  <tns:activityList>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:variableList<<
+caracteres:text:>>
+  <tns:activityList>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activityList<<
+caracteres:text:>>
+    <tns:activity id="A1" name="Demande">
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activity<<
+caracteres:text:>>
+    	<tns:description>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Remplir la demande de stage</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+    	<tns:performer>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:performer<<
+caracteres:text:>>tmv</tns:performer>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:performer<<
+caracteres:text:>>
+    	<tns:output name="description_stage" />
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:output<<
+fin de l'element:>>tns:output<<
+caracteres:text:>>
+    </tns:activity>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activity<<
+caracteres:text:>>
+    <tns:activity id="A2" name="Etude_demande">
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activity<<
+caracteres:text:>>
+    	<tns:description>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Etude de la demande de stage</tns:description>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+    	<tns:performer>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:performer<<
+caracteres:text:>>rex</tns:performer>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:performer<<
+caracteres:text:>>
+		<tns:input name="description_stage"/>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:input<<
+fin de l'element:>>tns:input<<
+caracteres:text:>>
+		<tns:output name="validation"/>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:output<<
+fin de l'element:>>tns:output<<
+caracteres:text:>>
+    </tns:activity>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activity<<
+caracteres:text:>>
+    <tns:activity id="A3" name="Refus">
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activity<<
+caracteres:text:>>
+    	<tns:description>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Demande de stage refusé</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+caracteres:text:>>é<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:performer<<
+caracteres:text:>>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:performer<<
+caracteres:text:>>
+    </tns:activity>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activity<<
+caracteres:text:>>
+    <tns:activity id="A4" name="Redaction">
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activity<<
+caracteres:text:>>
+    	<tns:description>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Redaction de la convention de stage</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:performer<<
+caracteres:text:>>nd</tns:performer>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:performer<<
+caracteres:text:>>
+    </tns:activity>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activity<<
+caracteres:text:>>
+    <tns:activity id="A5" name="Signature">
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activity<<
+caracteres:text:>>
+    	<tns:description>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Signature de la convention par l'étudiant</tns:description>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+caracteres:text:>>étudiant<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+    	<tns:performer>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:performer<<
+caracteres:text:>>tmv</tns:performer>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:performer<<
+caracteres:text:>>
+    </tns:activity>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activity<<
+caracteres:text:>>
+    <tns:activity name="Signature" id="A6">
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activity<<
+caracteres:text:>>
+    	<tns:description>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Signature de la convention par l'entreprise</tns:description>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+    	<tns:performer>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:performer<<
+caracteres:text:>>HAL</tns:performer>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:performer<<
+caracteres:text:>>
+    </tns:activity>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activity<<
+caracteres:text:>>
+    <tns:activity id="A7" name="Signature">
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:activity<<
+caracteres:text:>>
+    	<tns:description>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:description<<
+caracteres:text:>>Signature de la convention par l'école</tns:description>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+caracteres:text:>>école<<
+fin de l'element:>>tns:description<<
+caracteres:text:>>
+    	<tns:performer>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:performer<<
+caracteres:text:>>nd</tns:performer>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:performer<<
+caracteres:text:>>
+    </tns:activity>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activity<<
+caracteres:text:>>
+  </tns:activityList>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:activityList<<
+caracteres:text:>>
+  <tns:transitionList>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:transitionList<<
+caracteres:text:>>
+  	<tns:transition id="T1" from="A1" to="A2"></tns:transition>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:transition<<
+fin de l'element:>>tns:transition<<
+caracteres:text:>>
+  	<tns:transition id="T2" from="A2" to="A3">
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:transition<<
+caracteres:text:>>
+  		<tns:condition expr="validation==false"/>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:condition<<
+fin de l'element:>>tns:condition<<
+caracteres:text:>>
+  	</tns:transition>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:transition<<
+caracteres:text:>>
+  	<tns:transition id="T3" from="A2" to="A4">
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:transition<<
+caracteres:text:>>
+  		<tns:condition expr="validation==true"/>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:condition<<
+fin de l'element:>>tns:condition<<
+caracteres:text:>>
+  	</tns:transition>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:transition<<
+caracteres:text:>>
+  	<tns:transition id="T4" from="A4" to="A5"></tns:transition>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:transition<<
+fin de l'element:>>tns:transition<<
+caracteres:text:>>
+  	<tns:transition id="T5" from="A5" to="A6"></tns:transition>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:transition<<
+fin de l'element:>>tns:transition<<
+caracteres:text:>>
+  	<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+  </tns:transitionList>
+</tns:process>
+<<
+Debut de l'element:>>tns:transition<<
+fin de l'element:>>tns:transition<<
+caracteres:text:>>
+  </tns:transitionList>
+</tns:process>
+<<
+fin de l'element:>>tns:transitionList<<
+caracteres:text:>>
+</tns:process>
+<<
+fin de l'element:>>tns:process<<

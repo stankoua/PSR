@@ -1,0 +1,4 @@
+gcc -o test `xml2-config --cflags --libs` saxExample.c 
+
+gcc -o test saxExample.c -I/usr/include/libxml2/ -L/usr/include/libxml2 -lxml2
+
