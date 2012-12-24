@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:process xmlns:tns="http://www.example.org/process"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/process process.xsd ">
+	<tns:description>Voyage</tns:description>
+	<tns:variableList>
+		<tns:variable name="binome" type="string" /><tns:variable
+			name="lieu" type="string" /><tns:variable name="weather"
+			type="string" /></tns:variableList>
+	<tns:activityList>
+		<tns:activity id="A1" name="Binome">
+			<tns:description>Determination du binome</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:output name="binome"/>
+		</tns:activity>
+		<tns:activity id="A2" name="Lieu">
+			<tns:description>Choix du lieu de voyage</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:output name="lieu"/>
+		</tns:activity>
+		<tns:activity id="A3" name="hotel">
+			<tns:description>Reservation de l'hotel</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:input name="lieu"/>
+		</tns:activity>
+		<tns:activity id="A4" name="TGV">
+			<tns:description>Reservation du TGV</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:input name="lieu"/>
+		</tns:activity>
+		<tns:activity id="A5" name="valise">
+			<tns:description>Preparation de la valise</tns:description>
+			<tns:performer>rex</tns:performer>
+		</tns:activity>
+		<tns:activity id="A6" name="London">
+			<tns:description>Going to London</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+		<tns:activity id="A7" name="Book_Hotel">
+			<tns:description>Book hotel</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+		<tns:activity id="A8" name="Book_eurostar">
+			<tns:description>Book Eurostar</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+		<tns:activity id="A9" name="Train">
+			<tns:description>Take the train</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+		<tns:activity id="A10" name="Visit">
+			<tns:description>Visit London</tns:description>
+			<tns:performer>tmv</tns:performer>
+			<tns:output name="weather"></tns:output>
+		</tns:activity>
+		<tns:activity id="A11" name="Abbey">
+			<tns:description>Take a picture of Abbey Road</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+		<tns:activity id="A12" name="Tate">
+			<tns:description>Visit the Tate Gallery</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+		<tns:activity id="A13" name="Pub">
+			<tns:description>Taste the Guinness</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+		<tns:activity id="A14" name="return">
+			<tns:description>Return to Lille</tns:description>
+			<tns:performer>tmv</tns:performer>
+		</tns:activity>
+	</tns:activityList>
+	<tns:transitionList>
+		<tns:transition from="A1" id="T1" to="A2">
+			<tns:condition expr="binome!=T1070"></tns:condition></tns:transition>
+		<tns:transition from="A2" id="T2" to="A3"></tns:transition>
+		<tns:transition id="T3" from="A2" to="A4"></tns:transition>
+		<tns:transition id="T4" from="A2" to="A5"></tns:transition>
+		<tns:transition id="T5" from="A1" to="A6">
+			<tns:condition expr="binome==T1070"></tns:condition>
+		</tns:transition>
+		<tns:transition id="T6" from="A6" to="A7"></tns:transition>
+		<tns:transition id="T7" from="A6" to="A8"></tns:transition>
+		<tns:transition id="T9" from="A7" to="A9"></tns:transition>
+		<tns:transition id="T10" from="A8" to="A9"></tns:transition>
+		<tns:transition id="T11" from="A9" to="A10"></tns:transition>
+		<tns:transition id="T12" from="A10" to="A11">
+			<tns:condition expr="weather!=wet"></tns:condition>
+		</tns:transition>
+		<tns:transition id="T13" from="A10" to="A12">
+			<tns:condition expr="weather==wet"></tns:condition>
+		</tns:transition>
+		<tns:transition id="T14" from="A11" to="A13"></tns:transition>
+		<tns:transition id="T15" from="A12" to="A13"></tns:transition>
+		<tns:transition id="T16" from="A13" to="A14"></tns:transition>
+		</tns:transitionList>
+</tns:process>

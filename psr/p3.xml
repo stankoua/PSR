@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:process xmlns:tns="http://www.example.org/process"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/process process.xsd "
+	name="Evaluation">
+	<tns:description>Processus d'evaluation du tutorat PSR GIS4 2010 - 2011</tns:description>
+	<tns:variableList>
+		<tns:variable name="binome" type="string"></tns:variable>
+		<tns:variable name="note" type="int" initialValue="0"/>
+		<tns:variable name="compile" type="bool" initialValue="false" />
+		<tns:variable name="warning" type="bool" initialValue="false" />
+		<tns:variable name="connexionClient" type="bool" initialValue="false" />
+		<tns:variable name="thread_admin" type="bool" initialValue="false" />
+		<tns:variable name="cmd_clients" type="bool" initialValue="false" />
+		<tns:variable name="cmd_admin" type="bool" initialValue="false" />
+		<tns:variable name="ergonomie" type="bool" initialValue="false" />
+	</tns:variableList>
+	<tns:activityList>
+		<tns:activity id="Activity1" name="Choix">
+			<tns:description>Choix du binome qui est en cours d'evaluation</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:output name="binome" />
+		</tns:activity>
+		<tns:activity id="A2" name="Compile">
+			<tns:performer>ndv</tns:performer>
+			<tns:output name="compile" />
+		</tns:activity>
+		<tns:activity id="Activity3" name="Evaluation">
+			<tns:description>Evaluation du travail realise</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:input name="compile"></tns:input>
+			<tns:input name="binome"></tns:input>
+		</tns:activity>
+		<tns:activity id="A4" name="Fin">
+			<tns:description>Fin precoce de l'evaluation suite a la non compilation du code evalue</tns:description>
+			<tns:performer>tmv</tns:performer>
+			<tns:output name="note" />
+		</tns:activity>
+		<tns:activity id="A5" name="warnings">
+			<tns:description>Est-ce que la compilation se deroule sans aucun warning ?</tns:description>
+			<tns:performer>ndv</tns:performer>
+			<tns:output name="warning" />
+		</tns:activity>
+		<tns:activity id="Activity6" name="ConnexionClient">
+			<tns:description>Connexion d'un premier client</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:output name="connexionClient" />
+		</tns:activity>
+		<tns:activity id="Activity7" name="Test_IPC">
+			<tns:description>Le thread admin se lance correctement</tns:description>
+			<tns:performer>tmv</tns:performer>
+			<tns:output name="thread_admin" />
+		</tns:activity>
+		<tns:activity id="Activity8" name="Cmd_client">
+			<tns:description>Test des differentes commandes pouvant etre effectuees par un client connecte par socket</tns:description>
+			<tns:performer>ndv</tns:performer>
+			<tns:output name="cmd_clients" />
+		</tns:activity>
+		<tns:activity id="Activity9" name="Choix">
+			<tns:description>Test des commandes de l'administrateur</tns:description>
+			<tns:performer>tmv</tns:performer>
+			<tns:output name="cmd_admin" />
+		</tns:activity>
+		<tns:activity id="Activity10" name="ergonomie">
+			<tns:description>Evaluation de l'ergonomie de l'application client</tns:description>
+			<tns:performer>ndv</tns:performer>
+			<tns:output name="ergonomie" />
+		</tns:activity>
+		<tns:activity id="Activity12" name="cas_special">
+			<tns:description>Mettre une note au hasard</tns:description>
+			<tns:performer>ndv</tns:performer>
+			<tns:output name="note" />
+		</tns:activity>
+		<tns:activity id="Activity11" name="note_final">
+			<tns:description>Note finale suite a l'evaluation complete qui vient d'etre realise</tns:description>
+			<tns:performer>rex</tns:performer>
+			<tns:input name="compile"/>
+			<tns:input name="warning"/>
+			<tns:input name="connexionClient"/>
+			<tns:input name="thread_admin"/>
+			<tns:input name="cmd_clients"/>
+			<tns:input name="cmd_admin"/>
+			<tns:input name="ergonomie"/>
+			<tns:output name="note" />
+		</tns:activity>
+	</tns:activityList>
+	<tns:transitionList>
+		<tns:transition from="Activity1" to="Activity12" id="T1">
+			<tns:condition expr="binome==T1070" ></tns:condition></tns:transition>
+		<tns:transition from="Activity1" to="A2" id="Transition2">
+			<tns:condition expr="binome!=T1070" ></tns:condition></tns:transition>
+		<tns:transition from="A2" to="Activity3" id="T3">
+			<tns:condition expr="compile==true" ></tns:condition></tns:transition>
+		<tns:transition from="A2" to="A4" id="T4">
+			<tns:condition expr="compile==false" ></tns:condition></tns:transition>
+		<tns:transition from="Activity3" to="A5" id="T5"/>
+		<tns:transition from="Activity3" to="Activity6" id="T6"/>
+		<tns:transition from="Activity3" to="Activity7" id="Transition7"/>
+		<tns:transition from="A5" to="Activity11" id="T8"/>
+		<tns:transition from="Activity6" to="Activity8" id="T9"/>
+		<tns:transition from="Activity7" to="Activity9" id="T10"/>
+		<tns:transition from="Activity8" to="Activity10" id="T11"/>
+		<tns:transition from="Activity9" to="Activity11" id="T12"/>
+		<tns:transition from="Activity10" to="Activity11" id="T13"/>
+		</tns:transitionList>
+</tns:process>

@@ -1,0 +1,48 @@
+ A) Compilation :
+   * verification -Wall
+   * verification d'absence de warning
+ B) Ergonomie :
+   * lancement de l'engine (binome 1)
+   * connexion dessous (binome 2)
+   * verification du systeme de commandes (pas un menu)
+   * possibilite de connaitre les commandes
+ C) Gestion clients :
+   * ajout de deux users supplementaires dans fichier (binome 1)
+   * lancement de l'engine (binome 1)
+   * liste de tous les utilisateurs avec l'admin (binome 2)
+   * connexion 2 clients (binome 1)
+   * connexion 2 clients (binome 2)
+   * liste des utilisateurs connectes avec admin (binome 1)
+   * suppression d'un client du binome 2 avec exit (binome 2)
+   * liste des utilisateurs connectes avec client (binome 1)
+   * ajout d'un client (binome 2)
+   * liste des utilisateurs connectes avec admin (binome 1)
+   * suppression d'un client du binome 1 avec CTRL-C (binome 1)
+   * liste des utilisateurs connectes avec admin (binome 2)
+   * ajout d'un client (binome 1)
+   * liste des utilisateurs connectes avec client (binome 2)
+   * ajout d'un user supplementaire avec l'admin (binome 2)
+   * connexion de cet utilisateur (binome 1)
+   * liste de tous les utilisateurs avec l'admin (binome 2)
+   * liste des utilisateurs connectes avec admin (binome 2)
+ D) Gestion processus
+   * copier les processus de /usr/local/tmp/GIS4/PSR (b1)
+   * creer le processus p1 (b2)
+   * lister les processus et les infos de p1 (b1)
+   * derouler le processus en listant les informations apres
+     chaque validation (b1 gere rex, b2 gere tmv)
+   * creer le processus p2 (b1)
+   * lister les processus et les infos de p2 (b2)
+   * derouler le processus en listant les informations apres
+     chaque validation (b1 gere tmv, b2 gere rex)
+   * creer le processus p3 (b1)
+   * lister les processus et les infos de p3 (b2)
+   * derouler le processus en listant les informations apres
+     chaque validation (b1 gere tmv & ndv, b2 gere rex)
+   * creer le processus p3-crash (b2)
+   * lister les processus et les infos de p3-crash (b1)
+ E) Scrutation
+   * lancer un admin de scrutation (b1)
+   * faire quelques manipulation (b2)
+   * lancer un second admin de scrutation (b2)
+   * faire quelques manipulation (b1)
