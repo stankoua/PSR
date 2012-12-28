@@ -1,6 +1,6 @@
-#define SIZE 10
+#define SIZE 20
 #define LONGSIZE 200
-#define SMALLSIZE 5
+#define SMALLSIZE 10
 
 
 struct VariableType
@@ -16,7 +16,7 @@ struct ActivityType
 {
     char id[SIZE];                              // Attribut
     char name[SIZE];                            // Attribut
-    char description[SIZE];
+    char description[LONGSIZE];
     char performer[SIZE];
     enum State state;
     char input[SIZE];
@@ -27,9 +27,9 @@ struct ActivityType
 
 struct TransitionType
 {
-    char to[SIZE];                              // Attribute
     char id[SIZE];                              // Attribute
     char from[SIZE];                            // Attribute
+    char to[SIZE];                              // Attribute
     char condition[SIZE];
 };
 
@@ -51,10 +51,9 @@ struct ParserStateType
 {
     struct ProcessType* process;
     char buffer[LONGSIZE];            // buffer pour les valeurs lues
-    char* bufatr[SIZE];          // buffer pour les attributs
+    char bufatr[3][SIZE];             // buffer pour les attributs
     int nbatr;
     enum PossibleParserStates state;
-    //char current_element[SIZE];
 };
 
 // START 0

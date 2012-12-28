@@ -1,0 +1,263 @@
+Debut de l'element:>>tns:process<<:
+etat actuel debE # 0 #
+nouvel etat debE # 1 #
+etat actuel character # 1 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 1 #
+nouvel etat debE # 2 #
+etat actuel character # 2 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 2 #
+nouvel etat finE # 1 #
+etat actuel character # 1 #
+Debut de l'element:>>tns:variableList<<:
+etat actuel debE # 1 #
+nouvel etat debE # 3 #
+etat actuel character # 3 #
+Debut de l'element:>>tns:variable<<:
+etat actuel debE # 3 #
+nouvel etat debE # 4 #
+fin de l'element:>>tns:variable<<:
+etat actuel finE # 4 #
+nouvel etat finE # 3 #
+etat actuel character # 3 #
+Debut de l'element:>>tns:variable<<:
+etat actuel debE # 3 #
+nouvel etat debE # 4 #
+fin de l'element:>>tns:variable<<:
+etat actuel finE # 4 #
+nouvel etat finE # 3 #
+etat actuel character # 3 #
+fin de l'element:>>tns:variableList<<:
+etat actuel finE # 3 #
+nouvel etat finE # 1 #
+etat actuel character # 1 #
+Debut de l'element:>>tns:activityList<<:
+etat actuel debE # 1 #
+nouvel etat debE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:output<<:
+etat actuel debE # 6 #
+nouvel etat debE # 10 #
+fin de l'element:>>tns:output<<:
+etat actuel finE # 10 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:input<<:
+etat actuel debE # 6 #
+nouvel etat debE # 9 #
+fin de l'element:>>tns:input<<:
+etat actuel finE # 9 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:output<<:
+etat actuel debE # 6 #
+nouvel etat debE # 10 #
+fin de l'element:>>tns:output<<:
+etat actuel finE # 10 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+etat actuel character # 7 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+etat actuel character # 7 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+etat actuel character # 7 #
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+fin de l'element:>>tns:activityList<<:
+etat actuel finE # 5 #
+nouvel etat finE # 1 #
+etat actuel character # 1 #
+Debut de l'element:>>tns:transitionList<<:
+etat actuel debE # 1 #
+nouvel etat debE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+nouvel etat debE # 12 #
+etat actuel character # 12 #
+Debut de l'element:>>tns:condition<<:
+etat actuel debE # 12 #
+nouvel etat debE # 0 #
+fin de l'element:>>tns:condition<<:
+etat actuel finE # 0 #
+nouvel etat finE # 0 #
+etat actuel character # 0 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 0 #
+nouvel etat finE # 0 #
+etat actuel character # 0 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 0 #
+Erreur element tns:transition
