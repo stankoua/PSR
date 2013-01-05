@@ -330,6 +330,8 @@ void debutElement(struct ParserStateType* pstate, const xmlChar *name, const xml
         case TRANSITION:
             if(!strcmp(name,"tns:condition")) {
                 pstate->state = TRANS_CONDITION;
+                printf("================TEST etat # %d #\n",pstate->state);
+                pstate->state = 13;
                 // On ne fait pas comme d'habitude
                 // On copie l'attribut à la fin du tableau
                 j = pstate->nbatr;
@@ -374,6 +376,7 @@ void debutDocument(struct ParserStateType* pstate)
         psprs->transitionList[i];
 
     // Initialisation de l'etat de depart
+    printf("================ INTITIALISATION ==========================\n");
     pstate->state = START;    
 }
 
@@ -392,7 +395,7 @@ int main(int argc, char *argv[])
     handler.endElement = (endElementSAXFunc)finElement;
     handler.characters = (charactersSAXFunc)caracteres;
 
-    if(xmlSAXUserParseFile(&handler, &pstate, "process1.xml") <0) {perror("oups parser");}
+    if(xmlSAXUserParseFile(&handler, &pstate, "process2.xml") <0) {perror("oups parser");}
 
     return 0;
 }

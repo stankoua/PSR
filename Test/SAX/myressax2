@@ -1,3 +1,4 @@
+================ INTITIALISATION ==========================
 Debut de l'element:>>tns:process<<:
 etat actuel debE # 0 #
 nouvel etat debE # 1 #
@@ -249,15 +250,57 @@ nouvel etat debE # 12 #
 etat actuel character # 12 #
 Debut de l'element:>>tns:condition<<:
 etat actuel debE # 12 #
-nouvel etat debE # 0 #
+================TEST etat # 13 #
+nouvel etat debE # 13 #
 fin de l'element:>>tns:condition<<:
-etat actuel finE # 0 #
-nouvel etat finE # 0 #
-etat actuel character # 0 #
+etat actuel finE # 13 #
+nouvel etat finE # 12 #
+etat actuel character # 12 #
 fin de l'element:>>tns:transition<<:
-etat actuel finE # 0 #
-nouvel etat finE # 0 #
-etat actuel character # 0 #
+etat actuel finE # 12 #
+nouvel etat finE # 11 #
+etat actuel character # 11 #
 Debut de l'element:>>tns:transition<<:
-etat actuel debE # 0 #
-Erreur element tns:transition
+etat actuel debE # 11 #
+nouvel etat debE # 12 #
+etat actuel character # 12 #
+Debut de l'element:>>tns:condition<<:
+etat actuel debE # 12 #
+================TEST etat # 13 #
+nouvel etat debE # 13 #
+fin de l'element:>>tns:condition<<:
+etat actuel finE # 13 #
+nouvel etat finE # 12 #
+etat actuel character # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+fin de l'element:>>tns:transitionList<<:
+etat actuel finE # 11 #
+nouvel etat finE # 1 #
+etat actuel character # 1 #
+fin de l'element:>>tns:process<<:
+etat actuel finE # 1 #
+nouvel etat finE # 14 #

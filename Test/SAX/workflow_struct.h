@@ -51,7 +51,7 @@ struct ParserStateType
 {
     struct ProcessType* process;
     char buffer[LONGSIZE];            // buffer pour les valeurs lues
-    char bufatr[3][SIZE];             // buffer pour les attributs
+    char bufatr[4][SIZE];             // buffer pour les attributs
     int nbatr;
     enum PossibleParserStates state;
 };

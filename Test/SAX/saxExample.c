@@ -389,7 +389,7 @@ void debutDocument(struct ParserStateType* pstate)
         psprs->transitionList[i];
 
     // Initialisation de l'etat de depart
-    pstate->state = START;    
+    //pstate->state = START;    
 }
 
 void finDocument(struct ParserStateType* pstate)
