@@ -7,8 +7,14 @@ Debut de l'element:>>tns:description<<:
 etat actuel debE # 1 #
 nouvel etat debE # 2 #
 etat actuel character # 2 #
+==============TEST Chaine Extraite: Voyage
+
 fin de l'element:>>tns:description<<:
 etat actuel finE # 2 #
+========TEST Description du process: Voyage
+
+======== Nom du process-- Â --
+
 nouvel etat finE # 1 #
 etat actuel character # 1 #
 Debut de l'element:>>tns:variableList<<:
@@ -17,18 +23,64 @@ nouvel etat debE # 3 #
 etat actuel character # 3 #
 Debut de l'element:>>tns:variable<<:
 etat actuel debE # 3 #
+======== test attribut variable 0: binome
+
+======== test attribut variable 1: string
+
 nouvel etat debE # 4 #
 fin de l'element:>>tns:variable<<:
 etat actuel finE # 4 #
+======== test nbre variable: 0
+
+======== test attribut variable: binome
+
+========TEST variable process nom: binome
+
+======== test attribut variable: string
+
+========TEST variable process type: string
+
 nouvel etat finE # 3 #
-etat actuel character # 3 #
 Debut de l'element:>>tns:variable<<:
 etat actuel debE # 3 #
+======== test attribut variable 0: lieu
+
+======== test attribut variable 1: string
+
 nouvel etat debE # 4 #
 fin de l'element:>>tns:variable<<:
 etat actuel finE # 4 #
+======== test nbre variable: 1
+
+======== test attribut variable: lieu
+
+========TEST variable process nom: lieu
+
+======== test attribut variable: string
+
+========TEST variable process type: string
+
 nouvel etat finE # 3 #
-etat actuel character # 3 #
+Debut de l'element:>>tns:variable<<:
+etat actuel debE # 3 #
+======== test attribut variable 0: weather
+
+======== test attribut variable 1: string
+
+nouvel etat debE # 4 #
+fin de l'element:>>tns:variable<<:
+etat actuel finE # 4 #
+======== test nbre variable: 2
+
+======== test attribut variable: weather
+
+========TEST variable process nom: weather
+
+======== test attribut variable: string
+
+========TEST variable process type: string
+
+nouvel etat finE # 3 #
 fin de l'element:>>tns:variableList<<:
 etat actuel finE # 3 #
 nouvel etat finE # 1 #
@@ -45,16 +97,28 @@ Debut de l'element:>>tns:description<<:
 etat actuel debE # 6 #
 nouvel etat debE # 7 #
 etat actuel character # 7 #
+==============TEST Chaine Extraite: Determination du binome
+
 fin de l'element:>>tns:description<<:
 etat actuel finE # 7 #
+========TEST activity process nom: A1
+
+========TEST activity process type: Binome
+
+========TEST activity process description: Determination du binome
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:performer<<:
 etat actuel debE # 6 #
 nouvel etat debE # 8 #
 etat actuel character # 8 #
+==============TEST Chaine Extraite: rex
+
 fin de l'element:>>tns:performer<<:
 etat actuel finE # 8 #
+========TEST activity process performer: rex
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:output<<:
@@ -62,6 +126,8 @@ etat actuel debE # 6 #
 nouvel etat debE # 10 #
 fin de l'element:>>tns:output<<:
 etat actuel finE # 10 #
+========TEST activity process output: binome
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 fin de l'element:>>tns:activity<<:
@@ -76,16 +142,73 @@ Debut de l'element:>>tns:description<<:
 etat actuel debE # 6 #
 nouvel etat debE # 7 #
 etat actuel character # 7 #
+==============TEST Chaine Extraite: Choix du lieu de voyage
+
 fin de l'element:>>tns:description<<:
 etat actuel finE # 7 #
+========TEST activity process nom: A2
+
+========TEST activity process type: Lieu
+
+========TEST activity process description: Choix du lieu de voyage
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:performer<<:
 etat actuel debE # 6 #
 nouvel etat debE # 8 #
 etat actuel character # 8 #
+==============TEST Chaine Extraite: rex
+
 fin de l'element:>>tns:performer<<:
 etat actuel finE # 8 #
+========TEST activity process performer: rex
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:output<<:
+etat actuel debE # 6 #
+nouvel etat debE # 10 #
+fin de l'element:>>tns:output<<:
+etat actuel finE # 10 #
+========TEST activity process output: lieu
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Reservation de l'hotel
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A3
+
+========TEST activity process type: hotel
+
+========TEST activity process description: Reservation de l'hotel
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: rex
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: rex
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:input<<:
@@ -93,6 +216,269 @@ etat actuel debE # 6 #
 nouvel etat debE # 9 #
 fin de l'element:>>tns:input<<:
 etat actuel finE # 9 #
+========TEST activity process input: lieu
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Reservation du TGV
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A4
+
+========TEST activity process type: TGV
+
+========TEST activity process description: Reservation du TGV
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: rex
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: rex
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:input<<:
+etat actuel debE # 6 #
+nouvel etat debE # 9 #
+fin de l'element:>>tns:input<<:
+etat actuel finE # 9 #
+========TEST activity process input: lieu
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Preparation de la valise
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A5
+
+========TEST activity process type: valise
+
+========TEST activity process description: Preparation de la valise
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: rex
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: rex
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Going to London
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A6
+
+========TEST activity process type: London
+
+========TEST activity process description: Going to London
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Book hotel
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A7
+
+========TEST activity process type: Book_Hotel
+
+========TEST activity process description: Book hotel
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Book Eurostar
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A8
+
+========TEST activity process type: Book_eurostar
+
+========TEST activity process description: Book Eurostar
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Take the train
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A9
+
+========TEST activity process type: Train
+
+========TEST activity process description: Take the train
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+fin de l'element:>>tns:activity<<:
+etat actuel finE # 6 #
+nouvel etat finE # 5 #
+etat actuel character # 5 #
+Debut de l'element:>>tns:activity<<:
+etat actuel debE # 5 #
+nouvel etat debE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:description<<:
+etat actuel debE # 6 #
+nouvel etat debE # 7 #
+etat actuel character # 7 #
+==============TEST Chaine Extraite: Visit London
+
+fin de l'element:>>tns:description<<:
+etat actuel finE # 7 #
+========TEST activity process nom: A10
+
+========TEST activity process type: Visit
+
+========TEST activity process description: Visit London
+
+nouvel etat finE # 6 #
+etat actuel character # 6 #
+Debut de l'element:>>tns:performer<<:
+etat actuel debE # 6 #
+nouvel etat debE # 8 #
+etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
+fin de l'element:>>tns:performer<<:
+etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:output<<:
@@ -100,6 +486,8 @@ etat actuel debE # 6 #
 nouvel etat debE # 10 #
 fin de l'element:>>tns:output<<:
 etat actuel finE # 10 #
+========TEST activity process output: weather
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 fin de l'element:>>tns:activity<<:
@@ -114,17 +502,28 @@ Debut de l'element:>>tns:description<<:
 etat actuel debE # 6 #
 nouvel etat debE # 7 #
 etat actuel character # 7 #
-etat actuel character # 7 #
+==============TEST Chaine Extraite: Take a picture of Abbey Road
+
 fin de l'element:>>tns:description<<:
 etat actuel finE # 7 #
+========TEST activity process nom: A11
+
+========TEST activity process type: Abbey
+
+========TEST activity process description: Take a picture of Abbey Road
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:performer<<:
 etat actuel debE # 6 #
 nouvel etat debE # 8 #
 etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
 fin de l'element:>>tns:performer<<:
 etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 fin de l'element:>>tns:activity<<:
@@ -139,16 +538,28 @@ Debut de l'element:>>tns:description<<:
 etat actuel debE # 6 #
 nouvel etat debE # 7 #
 etat actuel character # 7 #
+==============TEST Chaine Extraite: Visit the Tate Gallery
+
 fin de l'element:>>tns:description<<:
 etat actuel finE # 7 #
+========TEST activity process nom: A12
+
+========TEST activity process type: Tate
+
+========TEST activity process description: Visit the Tate Gallery
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:performer<<:
 etat actuel debE # 6 #
 nouvel etat debE # 8 #
 etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
 fin de l'element:>>tns:performer<<:
 etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 fin de l'element:>>tns:activity<<:
@@ -163,17 +574,28 @@ Debut de l'element:>>tns:description<<:
 etat actuel debE # 6 #
 nouvel etat debE # 7 #
 etat actuel character # 7 #
-etat actuel character # 7 #
+==============TEST Chaine Extraite: Taste the Guinness
+
 fin de l'element:>>tns:description<<:
 etat actuel finE # 7 #
+========TEST activity process nom: A13
+
+========TEST activity process type: Pub
+
+========TEST activity process description: Taste the Guinness
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:performer<<:
 etat actuel debE # 6 #
 nouvel etat debE # 8 #
 etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
 fin de l'element:>>tns:performer<<:
 etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 fin de l'element:>>tns:activity<<:
@@ -188,41 +610,28 @@ Debut de l'element:>>tns:description<<:
 etat actuel debE # 6 #
 nouvel etat debE # 7 #
 etat actuel character # 7 #
+==============TEST Chaine Extraite: Return to Lille
+
 fin de l'element:>>tns:description<<:
 etat actuel finE # 7 #
+========TEST activity process nom: A14
+
+========TEST activity process type: return
+
+========TEST activity process description: Return to Lille
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 Debut de l'element:>>tns:performer<<:
 etat actuel debE # 6 #
 nouvel etat debE # 8 #
 etat actuel character # 8 #
+==============TEST Chaine Extraite: tmv
+
 fin de l'element:>>tns:performer<<:
 etat actuel finE # 8 #
-nouvel etat finE # 6 #
-etat actuel character # 6 #
-fin de l'element:>>tns:activity<<:
-etat actuel finE # 6 #
-nouvel etat finE # 5 #
-etat actuel character # 5 #
-Debut de l'element:>>tns:activity<<:
-etat actuel debE # 5 #
-nouvel etat debE # 6 #
-etat actuel character # 6 #
-Debut de l'element:>>tns:description<<:
-etat actuel debE # 6 #
-nouvel etat debE # 7 #
-etat actuel character # 7 #
-etat actuel character # 7 #
-fin de l'element:>>tns:description<<:
-etat actuel finE # 7 #
-nouvel etat finE # 6 #
-etat actuel character # 6 #
-Debut de l'element:>>tns:performer<<:
-etat actuel debE # 6 #
-nouvel etat debE # 8 #
-etat actuel character # 8 #
-fin de l'element:>>tns:performer<<:
-etat actuel finE # 8 #
+========TEST activity process performer: tmv
+
 nouvel etat finE # 6 #
 etat actuel character # 6 #
 fin de l'element:>>tns:activity<<:
@@ -239,29 +648,12 @@ nouvel etat debE # 11 #
 etat actuel character # 11 #
 Debut de l'element:>>tns:transition<<:
 etat actuel debE # 11 #
-nouvel etat debE # 12 #
-fin de l'element:>>tns:transition<<:
-etat actuel finE # 12 #
-nouvel etat finE # 11 #
-etat actuel character # 11 #
-Debut de l'element:>>tns:transition<<:
-etat actuel debE # 11 #
-nouvel etat debE # 12 #
-etat actuel character # 12 #
-Debut de l'element:>>tns:condition<<:
-etat actuel debE # 12 #
-================TEST etat # 13 #
-nouvel etat debE # 13 #
-fin de l'element:>>tns:condition<<:
-etat actuel finE # 13 #
-nouvel etat finE # 12 #
-etat actuel character # 12 #
-fin de l'element:>>tns:transition<<:
-etat actuel finE # 12 #
-nouvel etat finE # 11 #
-etat actuel character # 11 #
-Debut de l'element:>>tns:transition<<:
-etat actuel debE # 11 #
+======== test attribut variable 0: A1
+
+======== test attribut variable 1: T1
+
+======== test attribut variable 2: A2
+
 nouvel etat debE # 12 #
 etat actuel character # 12 #
 Debut de l'element:>>tns:condition<<:
@@ -270,31 +662,316 @@ etat actuel debE # 12 #
 nouvel etat debE # 13 #
 fin de l'element:>>tns:condition<<:
 etat actuel finE # 13 #
+========TEST transition process condition: expr
+
+nouvel etat finE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: A1
+
+========TEST transition process from: T1
+
+========TEST transition process to: A2
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: A2
+
+======== test attribut variable 1: T2
+
+======== test attribut variable 2: A3
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: A2
+
+========TEST transition process from: T2
+
+========TEST transition process to: A3
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T3
+
+======== test attribut variable 1: A2
+
+======== test attribut variable 2: A4
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T3
+
+========TEST transition process from: A2
+
+========TEST transition process to: A4
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T4
+
+======== test attribut variable 1: A2
+
+======== test attribut variable 2: A5
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T4
+
+========TEST transition process from: A2
+
+========TEST transition process to: A5
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T5
+
+======== test attribut variable 1: A1
+
+======== test attribut variable 2: A6
+
+nouvel etat debE # 12 #
+etat actuel character # 12 #
+Debut de l'element:>>tns:condition<<:
+etat actuel debE # 12 #
+================TEST etat # 13 #
+nouvel etat debE # 13 #
+fin de l'element:>>tns:condition<<:
+etat actuel finE # 13 #
+========TEST transition process condition: expr
+
 nouvel etat finE # 12 #
 etat actuel character # 12 #
 fin de l'element:>>tns:transition<<:
 etat actuel finE # 12 #
+========TEST transition process id: T5
+
+========TEST transition process from: A1
+
+========TEST transition process to: A6
+
 nouvel etat finE # 11 #
 etat actuel character # 11 #
 Debut de l'element:>>tns:transition<<:
 etat actuel debE # 11 #
+======== test attribut variable 0: T6
+
+======== test attribut variable 1: A6
+
+======== test attribut variable 2: A7
+
 nouvel etat debE # 12 #
 fin de l'element:>>tns:transition<<:
 etat actuel finE # 12 #
+========TEST transition process id: T6
+
+========TEST transition process from: A6
+
+========TEST transition process to: A7
+
 nouvel etat finE # 11 #
 etat actuel character # 11 #
 Debut de l'element:>>tns:transition<<:
 etat actuel debE # 11 #
+======== test attribut variable 0: T7
+
+======== test attribut variable 1: A6
+
+======== test attribut variable 2: A8
+
 nouvel etat debE # 12 #
 fin de l'element:>>tns:transition<<:
 etat actuel finE # 12 #
+========TEST transition process id: T7
+
+========TEST transition process from: A6
+
+========TEST transition process to: A8
+
 nouvel etat finE # 11 #
 etat actuel character # 11 #
 Debut de l'element:>>tns:transition<<:
 etat actuel debE # 11 #
+======== test attribut variable 0: T9
+
+======== test attribut variable 1: A7
+
+======== test attribut variable 2: A9
+
 nouvel etat debE # 12 #
 fin de l'element:>>tns:transition<<:
 etat actuel finE # 12 #
+========TEST transition process id: T9
+
+========TEST transition process from: A7
+
+========TEST transition process to: A9
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T10
+
+======== test attribut variable 1: A8
+
+======== test attribut variable 2: A9
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T10
+
+========TEST transition process from: A8
+
+========TEST transition process to: A9
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T11
+
+======== test attribut variable 1: A9
+
+======== test attribut variable 2: A10
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T11
+
+========TEST transition process from: A9
+
+========TEST transition process to: A10
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T12
+
+======== test attribut variable 1: A10
+
+======== test attribut variable 2: A11
+
+nouvel etat debE # 12 #
+etat actuel character # 12 #
+Debut de l'element:>>tns:condition<<:
+etat actuel debE # 12 #
+================TEST etat # 13 #
+nouvel etat debE # 13 #
+fin de l'element:>>tns:condition<<:
+etat actuel finE # 13 #
+========TEST transition process condition: expr
+
+nouvel etat finE # 12 #
+etat actuel character # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T12
+
+========TEST transition process from: A10
+
+========TEST transition process to: A11
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T13
+
+======== test attribut variable 1: A10
+
+======== test attribut variable 2: A12
+
+nouvel etat debE # 12 #
+etat actuel character # 12 #
+Debut de l'element:>>tns:condition<<:
+etat actuel debE # 12 #
+================TEST etat # 13 #
+nouvel etat debE # 13 #
+fin de l'element:>>tns:condition<<:
+etat actuel finE # 13 #
+========TEST transition process condition: expr
+
+nouvel etat finE # 12 #
+etat actuel character # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T13
+
+========TEST transition process from: A10
+
+========TEST transition process to: A12
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T14
+
+======== test attribut variable 1: A11
+
+======== test attribut variable 2: A13
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T14
+
+========TEST transition process from: A11
+
+========TEST transition process to: A13
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T15
+
+======== test attribut variable 1: A12
+
+======== test attribut variable 2: A13
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T15
+
+========TEST transition process from: A12
+
+========TEST transition process to: A13
+
+nouvel etat finE # 11 #
+etat actuel character # 11 #
+Debut de l'element:>>tns:transition<<:
+etat actuel debE # 11 #
+======== test attribut variable 0: T16
+
+======== test attribut variable 1: A13
+
+======== test attribut variable 2: A14
+
+nouvel etat debE # 12 #
+fin de l'element:>>tns:transition<<:
+etat actuel finE # 12 #
+========TEST transition process id: T16
+
+========TEST transition process from: A13
+
+========TEST transition process to: A14
+
 nouvel etat finE # 11 #
 etat actuel character # 11 #
 fin de l'element:>>tns:transitionList<<:
@@ -303,4 +980,4 @@ nouvel etat finE # 1 #
 etat actuel character # 1 #
 fin de l'element:>>tns:process<<:
 etat actuel finE # 1 #
-nouvel etat finE # 14 #
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<FINISH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>nouvel etat finE # 14 #

@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <libsck.h>
 #include <string.h>
+
 #include "gestion_client.h"
+#include "workflow_struct.h"
 
-
-#define SIZE 20
 #define MAXSIZE 1024
 
 
@@ -15,21 +15,23 @@ FILE* users;            // Variabe globale externe
 /* Fonction de connnexion du client
  *     verifie le login et le mot de passe
  */
-static int connexionClient(FILE* dialogue,char* log, char* mdp)
+static int connexionClient(int dialogue,char* log, char* mdp)
 {
-    char rlog[SIZE],rmdp[SIZE];
+    char rlog[SMALLSIZE],rmdp[SMALLSIZE],rnom[SMALLSIZE],rpnom[SMALLSIZE];
     char buffer[MAXSIZE];
     int trouve=0, fin=0; 
-
 
     while(!trouve && !fin)
     {
         if(fgets(buffer,MAXSIZE,users)!=NULL)
         {
-            sscanf(buffer,"%[a-z]:%[a-z]:%*[a-zA-Z] %*[a-zA-Z]",rlog,rmdp);
+            sscanf(buffer,"%[a-z]:%[a-z]:%[a-zA-Z] %[a-zA-Z]",rlog,rmdp,rnom,rpnom);
 
             if(!strcmp(log,rlog) && !strcmp(mdp,rmdp))
+	    {
                 trouve = 1;
+		addUser(&t_users,dialogue,rlog,rnom,rpnom);
+	    }
         }else fin = 1;
     }
     
@@ -72,7 +74,7 @@ void* gestionClient(void* sd)
         fprintf(dialogue,"Login: "); fscanf(dialogue,"%s",log);
         fprintf(dialogue,"Mot de passe: "); fscanf(dialogue,"%s",mdp);
 
-        if(connexionClient(dialogue,log,mdp))
+        if(connexionClient(tmp,log,mdp))
         {
             fprintf(stdout,"Connexion client\n");
             fprintf(stdout, "nom du client: %s\n", name);
@@ -87,7 +89,7 @@ void* gestionClient(void* sd)
                     fin = 1;
                 else {
                     fprintf(dialogue,"Vous avez tape: %s\n",buffer);
-                    fprintf(dialogue,"Tapez exit pour terminer\n");   
+                    fprintf(dialogue,"\t\tTapez exit pour terminer\n");   
                 }
             }
             deconnexionClient(dialogue,sd);

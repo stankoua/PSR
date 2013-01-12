@@ -3,8 +3,7 @@
 
 #include "workflow_struct.h"
 
-#define psprs pstate->process
-
+#define VERBOSE
 
 static xmlSAXHandler handler;
 
@@ -26,26 +25,31 @@ void caracteres(struct ParserStateType* pstate, const xmlChar *text, int length)
             tmp = strtok( str, "<" );
             tmp[strlen(tmp)] = '\0';
             strcpy( pstate->buffer, tmp );
-	        //printf( "==============TEST Chaine Extraite: %s\n\n",pstate->buffer );
+#ifdef VERBOSE
+	        printf( "==============TEST Chaine Extraite: %s\n\n",pstate->buffer );
+#endif
             break;
 
         case ACT_DESCRIPTION:
             tmp = strtok( str, "<" );
             tmp[strlen(tmp)] = '\0';
             strcpy( pstate->buffer, tmp );
-	        //printf( "==============TEST Chaine Extraite: %s\n\n",pstate->buffer );
+#ifdef VERBOSE
+	        printf( "==============TEST Chaine Extraite: %s\n\n",pstate->buffer );
+#endif
             break;
 
         case ACT_PERFORMER:
             tmp = strtok( str, "<" );
             tmp[strlen(tmp)] = '\0';
             strcpy( pstate->buffer, tmp );
-	        //printf( "==============TEST Chaine Extraite: %s\n\n",pstate->buffer );
+#ifdef VERBOSE
+	        printf( "==============TEST Chaine Extraite: %s\n\n",pstate->buffer );
+#endif
             break;
 
         default:
             // Ne nous interesse pas, donc on affiche pas
-            // printf("Autre character:>>%s<<:\n",text);
             break;
     }
 }
@@ -65,6 +69,7 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
             if(!strcmp(name,"tns:process")) {
                 // Fin de fichier atteint
                 pstate->state = FINISH;
+                printf("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<FINISH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"); 
             }else 
                 { printf("Erreur element %s\n",name); exit(-1); }            
             break;
@@ -72,12 +77,15 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
         case DESCRIPTION:
             if(!strcmp(name,"tns:description")) {
                 strcpy(pstate->process->description,pstate->buffer);
-                //printf("========TEST Description du process: %s\n\n",pstate->process->description);
-                // ================================== Pas géré for now ========================
+#ifdef VERBOSE
+                printf("========TEST Description du process: %s\n\n",pstate->process->description);
+#endif
                 // On enregistre le nom du process en meme tps que la description
                 // Pour eviter ne pas le faire en fin de fichier
-                //strcpy(pstate->process->name,pstate->bufatr[0]);
-                //printf("======== Nom du process-- %s --\n\n",pstate->process->name);
+                strcpy(pstate->process->name,pstate->bufatr[0]);
+#ifdef VERBOSE
+                printf("======== Nom du process-- %s --\n\n",pstate->process->name);
+#endif
                 pstate->state = PROCESS;
             }else 
                 { printf("Erreur element %s\n",name); exit(-1); }            
@@ -93,17 +101,25 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
         case VARIABLE:
             if(!strcmp(name,"tns:variable")) {
                 i = pstate->process->nbvar;
-                //printf("======== test nbre variable: %d\n\n",pstate->process->nbvar);
+#ifdef VERBOSE
+                printf("======== test nbre variable: %d\n\n",pstate->process->nbvar);
+#endif
                 strcpy(pstate->process->variableList[i].name,pstate->bufatr[0]);
-                //printf("======== test attribut variable: %s\n\n",pstate->bufatr[0]);
-                //printf("========TEST variable process nom: %s\n\n",pstate->process->variableList[i].name);
+#ifdef VERBOSE
+                printf("======== test attribut variable: %s\n\n",pstate->bufatr[0]);
+                printf("========TEST variable process nom: %s\n\n",pstate->process->variableList[i].name);
+#endif
                 strcpy(pstate->process->variableList[i].type,pstate->bufatr[1]);
-                //printf("======== test attribut variable: %s\n\n",pstate->bufatr[1]);
-                //printf("========TEST variable process type: %s\n\n",pstate->process->variableList[i].type);
+#ifdef VERBOSE
+                printf("======== test attribut variable: %s\n\n",pstate->bufatr[1]);
+                printf("========TEST variable process type: %s\n\n",pstate->process->variableList[i].type);
+#endif
                 if(pstate->nbatr == 3)
                 {
                     strcpy(pstate->process->variableList[i].initialvalue,pstate->bufatr[2]);
-                    //printf("========TEST variable process init value: %s\n\n",pstate->process->variableList[i].initialvalue);
+#ifdef VERBOSE
+                    printf("========TEST variable process init value: %s\n\n",pstate->process->variableList[i].initialvalue);
+#endif
                 }
                 pstate->process->nbvar += 1;
                 pstate->state = VARIABLE_LIST;
@@ -131,12 +147,18 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
                 // On enregistre d'abord les attributs de l'actvité
                 i = pstate->process->nbact;
                 strcpy(pstate->process->activityList[i].id,pstate->bufatr[0]);
-                //printf("========TEST activity process nom: %s\n\n",pstate->process->activityList[i].id);
+#ifdef VERBOSE
+                printf("========TEST activity process nom: %s\n\n",pstate->process->activityList[i].id);
+#endif
                 strcpy(pstate->process->activityList[i].name,pstate->bufatr[1]);
-                //printf("========TEST activity process type: %s\n\n",pstate->process->activityList[i].name);
+#ifdef VERBOSE
+                printf("========TEST activity process type: %s\n\n",pstate->process->activityList[i].name);
+#endif
                 // Ensuite la description
                 strcpy(pstate->process->activityList[i].description,pstate->buffer);
-                //printf("========TEST activity process description: %s\n\n",pstate->process->activityList[i].description);
+#ifdef VERBOSE
+                printf("========TEST activity process description: %s\n\n",pstate->process->activityList[i].description);
+#endif
                 // Fini 
                 pstate->state = ACTIVITY;
             }else 
@@ -147,7 +169,9 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
             if(!strcmp(name,"tns:performer")) {
                 i = pstate->process->nbact;
                 strcpy(pstate->process->activityList[i].performer,pstate->buffer);
-                //printf("========TEST activity process performer: %s\n\n",pstate->process->activityList[i].performer);
+#ifdef VERBOSE
+                printf("========TEST activity process performer: %s\n\n",pstate->process->activityList[i].performer);
+#endif
                 pstate->state = ACTIVITY;
             }else 
                 { printf("Erreur element %s",name); exit(-1); }            
@@ -157,7 +181,9 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
             if(!strcmp(name,"tns:input")) {
                 i = pstate->process->nbact;
                 strcpy(pstate->process->activityList[i].input,pstate->bufatr[0]);
-                //printf("========TEST activity process input: %s\n\n",pstate->process->activityList[i].input);
+#ifdef VERBOSE
+                printf("========TEST activity process input: %s\n\n",pstate->process->activityList[i].input);
+#endif                
                 pstate->state = ACTIVITY;
             }else 
                 { printf("Erreur element %s",name); exit(-1); }            
@@ -167,7 +193,9 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
             if(!strcmp(name,"tns:output")) {
                 i = pstate->process->nbact;
                 strcpy(pstate->process->activityList[i].output,pstate->bufatr[0]);
-                //printf("========TEST activity process output: %s\n\n",pstate->process->activityList[i].output);
+#ifdef VERBOSE
+                printf("========TEST activity process output: %s\n\n",pstate->process->activityList[i].output);
+#endif
                 pstate->state = ACTIVITY;
             }else 
                 { printf("Erreur element %s",name); exit(-1); }            
@@ -184,11 +212,17 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
             if(!strcmp(name,"tns:transition")) {
                 i = pstate->process->nbtrans;
                 strcpy(pstate->process->transitionList[i].id,pstate->bufatr[0]);
-                //printf("========TEST transition process id: %s\n\n",pstate->process->transitionList[i].id);
+#ifdef VERBOSE
+                printf("========TEST transition process id: %s\n\n",pstate->process->transitionList[i].id);
+#endif
                 strcpy(pstate->process->transitionList[i].from,pstate->bufatr[1]);
-                //printf("========TEST transition process from: %s\n\n",pstate->process->transitionList[i].from);
+#ifdef VERBOSE
+                printf("========TEST transition process from: %s\n\n",pstate->process->transitionList[i].from);
+#endif
                 strcpy(pstate->process->transitionList[i].to,pstate->bufatr[2]);
-                //printf("========TEST transition process to: %s\n\n",pstate->process->transitionList[i].to);
+#ifdef VERBOSE
+                printf("========TEST transition process to: %s\n\n",pstate->process->transitionList[i].to);
+#endif
                 pstate->state = TRANSITION_LIST;
             }else 
                 { printf("Erreur element %s",name); exit(-1); }            
@@ -201,7 +235,9 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
                 // Par contre on commence a remplir la transition ici
                 i = pstate->process->nbtrans;
                 strcpy(pstate->process->transitionList[i].condition,pstate->bufatr[3]);
-                //printf("========TEST transition process condition: %s\n\n",pstate->process->transitionList[i].condition);
+#ifdef VERBOSE
+                printf("========TEST transition process condition: %s\n\n",pstate->process->transitionList[i].condition);
+#endif
                 pstate->state = TRANSITION;
             }else 
                 { printf("Erreur element %s",name); exit(-1); }
@@ -209,8 +245,8 @@ void finElement(struct ParserStateType* pstate, const xmlChar *name)
 
         default:
             // ERREUR
-            //printf("Erreur fin element: %s\n",name);
-            //exit(-1);
+            printf("Erreur fin element: %s\n",name);
+            exit(-1);
             break;
     }
     printf("nouvel etat finE # %d #\n",pstate->state);
@@ -236,9 +272,12 @@ void debutElement(struct ParserStateType* pstate, const xmlChar *name, const xml
                  * Un attribut: name
                  */
                 i = 0;
-                //strcpy( pstate->bufatr[i], tmp);
-                //pstate->nbatr = i;
-		        //=====================================================         
+                while(attrs[i]!=NULL && strcmp(attrs[i],"xmlns:name")!=0)     
+                    i += 2;
+
+                if(attrs[i]!=NULL)
+                    strcpy(pstate->bufatr[0], attrs[i+1]);
+                pstate->nbatr += 1;
             }else // ERREUR
                 { printf("Erreur element %s",name); exit(-1); }
             break;
@@ -265,7 +304,9 @@ void debutElement(struct ParserStateType* pstate, const xmlChar *name, const xml
                 while(attrs[i]!=NULL)
                 {
                     strcpy(pstate->bufatr[j], attrs[i+1]);
-                    //printf("======== test attribut variable %d: %s\n\n",j,pstate->bufatr[j]);
+#ifdef VERBOSE
+                    printf("======== test attribut variable %d: %s\n\n",j,pstate->bufatr[j]);
+#endif
                     i += 2; j += 1;
                 }
                 pstate->nbatr = j;
@@ -319,7 +360,9 @@ void debutElement(struct ParserStateType* pstate, const xmlChar *name, const xml
                 while(attrs[i]!=NULL)
                 {
                     strcpy(pstate->bufatr[j], attrs[i+1]);
-                    //printf("======== test attribut variable %d: %s\n\n",j,pstate->bufatr[j]);
+#ifdef VERBOSE
+                    printf("======== test attribut variable %d: %s\n\n",j,pstate->bufatr[j]);
+#endif
                     i += 2; j += 1;
                 }
                 pstate->nbatr = j;
@@ -330,7 +373,9 @@ void debutElement(struct ParserStateType* pstate, const xmlChar *name, const xml
         case TRANSITION:
             if(!strcmp(name,"tns:condition")) {
                 pstate->state = TRANS_CONDITION;
+#ifdef VERBOSE
                 printf("================TEST etat # %d #\n",pstate->state);
+#endif
                 pstate->state = 13;
                 // On ne fait pas comme d'habitude
                 // On copie l'attribut à la fin du tableau
@@ -342,10 +387,7 @@ void debutElement(struct ParserStateType* pstate, const xmlChar *name, const xml
             break;
 
         case FINISH:
-            // ERREUR
-            //printf("Erreur element %s",name); 
-            printf("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<FINISH>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"); 
-            //exit(-1); 
+            exit(-1); 
             break;
         
         default:
@@ -354,43 +396,32 @@ void debutElement(struct ParserStateType* pstate, const xmlChar *name, const xml
             // On ne change pas l'état courant
             // cas DESCRIPTION, TRANS_CONDITION,FINISH,VARIABLE
             // ACT_DESCRIPTION,ACT_PERFORMER,ACT_INPUT,ACT_OUTPUT
-            //printf("Erreur %s \n",name); 
-            //exit(-1); 
             break;
     }
+#ifdef VERBOSE
     printf("nouvel etat debE # %d #\n",pstate->state);    
+#endif 
 }
 
 
 void debutDocument(struct ParserStateType* pstate)
 {
     // Initialisation de process et de ses attributs
-    psprs = (struct ProcessType *)malloc(sizeof(struct ProcessType));
-    psprs->nbvar = psprs->nbact = psprs->nbtrans = 0;
-    int i;
-    for(i=0;i<SIZE;i++)
-        psprs->variableList[i];
-    for(i=0;i<SIZE;i++)
-        psprs->activityList[i];
-    for(i=0;i<SIZE;i++)
-        psprs->transitionList[i];
+    pstate->process = (struct ProcessType *)malloc(sizeof(struct ProcessType));
+    pstate->process->nbvar = pstate->process->nbact = pstate->process->nbtrans = 0;
 
     // Initialisation de l'etat de depart
+#ifdef VERBOSE
     printf("================ INTITIALISATION ==========================\n");
+#endif
     pstate->state = START;    
 }
-
-
-
-void finDocument(struct ParserStateType* pstate)
-{}
 
 int main(int argc, char *argv[])
 {
     struct ParserStateType pstate;
 
     handler.startDocument = (startDocumentSAXFunc)debutDocument;
-    handler.endDocument = (endDocumentSAXFunc)finDocument;
     handler.startElement = (startElementSAXFunc)debutElement;
     handler.endElement = (endElementSAXFunc)finElement;
     handler.characters = (charactersSAXFunc)caracteres;
