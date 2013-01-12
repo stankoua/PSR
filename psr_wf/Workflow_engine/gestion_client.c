@@ -3,7 +3,7 @@
 #include <libsck.h>
 #include <string.h>
 #include "gestion_client.h"
-
+#include "workflow_struct.h"
 
 #define SIZE 20
 #define MAXSIZE 1024
