@@ -44,19 +44,19 @@ int addProcess(struct TabProcessType* t_process, char* fichier)
   int i = t_process->nbprocess;
   struct ProcessType *process;
 
-  printf("======= addProcess before parsing "); 
+  printf("======= addProcess before parsing \n"); 
   // Parse le fichier du process
   //if((process = parseFile(fichier))==NULL) 
     //{perror("Erreur parser fichier:"); return 1;}
 
   process = parseFile(fichier); 
 
-  printf("======= addProcess end parsing"); 
+  printf("======= addProcess end parsing\n"); 
 
   t_process->tab_process[i] = process;
   t_process->nbprocess += 1;
 
-  printf("======= FIN addProcess"); 
+  printf("======= FIN addProcess\n"); 
   return 0;
 }
 
