@@ -15,9 +15,9 @@ FILE* users;            // Variabe globale externe
 /* Fonction de connnexion du client
  *     verifie le login et le mot de passe
  */
-static int connexionClient(FILE* dialogue,char* log, char* mdp)
+static int connexionClient(FILE* dialogue,int socket,char* log, char* mdp)
 {
-    char rlog[SIZE],rmdp[SIZE];
+    char rlog[SIZE],rmdp[SIZE],rnom[SIZE],rpnom[SIZE];
     char buffer[MAXSIZE];
     int trouve=0, fin=0; 
 
@@ -26,10 +26,10 @@ static int connexionClient(FILE* dialogue,char* log, char* mdp)
     {
         if(fgets(buffer,MAXSIZE,users)!=NULL)
         {
-            sscanf(buffer,"%[a-z]:%[a-z]:%*[a-zA-Z] %*[a-zA-Z]",rlog,rmdp);
+            sscanf(buffer,"%[a-z]:%[a-z]:%[a-zA-Z] %[a-zA-Z]",rlog,rmdp,rnom,rpnom);
 
             if(!strcmp(log,rlog) && !strcmp(mdp,rmdp))
-                trouve = 1;
+              { trouve = 1; addUser(&t_users, socket, rlog, rnom, rpnom);}
         }else fin = 1;
     }
     
@@ -72,7 +72,7 @@ void* gestionClient(void* sd)
         fprintf(dialogue,"Login: "); fscanf(dialogue,"%s",log);
         fprintf(dialogue,"Mot de passe: "); fscanf(dialogue,"%s",mdp);
 
-        if(connexionClient(dialogue,log,mdp))
+        if(connexionClient(dialogue,tmp,log,mdp))
         {
             fprintf(stdout,"Connexion client\n");
             fprintf(stdout, "nom du client: %s\n", name);
